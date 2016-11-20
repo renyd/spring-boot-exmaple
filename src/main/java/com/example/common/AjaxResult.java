@@ -1,9 +1,11 @@
 package com.example.common;
 
+import com.example.domain.BaseEntity;
+
 /**
  * Created by Domg on 2016/11/20.
  */
-public class AjaxResult {
+public class AjaxResult extends BaseEntity {
 
     private String code;
     private String message;
