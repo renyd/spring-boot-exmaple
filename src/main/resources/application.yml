@@ -1,9 +1,9 @@
 spring:
     datasource:
         name: test
-        url: jdbc:mysql://192.168.16.137:3306/test
+        url: jdbc:mysql://192.168.137.201:3306/test
         username: root
-        password:
+        password: 123456
         # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
@@ -20,6 +20,12 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
+    elasticsearch:
+        jest:
+          uris: 192.168.137.201:9200
+          read-timeout: 10000
+          username:
+          password:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage: com.example.domain.*
