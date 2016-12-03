@@ -22,7 +22,8 @@ spring:
         maxOpenPreparedStatements: 20
     elasticsearch:
         jest:
-          uris: 192.168.137.201:9200
+          multiThreaded: true
+          uris: http://192.168.137.201:9200
           read-timeout: 10000
           username:
           password:
