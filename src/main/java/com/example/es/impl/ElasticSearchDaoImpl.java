@@ -1,12 +1,10 @@
 package com.example.es.impl;
 
-import com.example.domain.Page;
-import com.example.es.ElasticsearchDao;
+import com.example.es.ElasticSearchDao;
 import com.google.gson.Gson;
 import io.searchbox.client.JestClient;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
-import org.apache.lucene.queryparser.xml.builders.FilteredQueryBuilder;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
@@ -17,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.io.IOException;
-import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -25,9 +22,9 @@ import java.util.Set;
  * Created by Domg on 2016/11/27.
  */
 @Service
-public class ElasticsearchDaoImpl implements ElasticsearchDao {
+public class ElasticSearchDaoImpl implements ElasticSearchDao {
 
-    private static final Logger logger = LoggerFactory.getLogger(ElasticsearchDaoImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(ElasticSearchDaoImpl.class);
 
     private Gson gson = new Gson();
 
